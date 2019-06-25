@@ -7,7 +7,7 @@ This service is currently a simple master slave model.<br>
 One instance is designated (via env var) as the master <br>
 All instances (including the master itself) send actually requests <br>
 to this ip.<br>
-Future improvements include cashing results at the slaves and <br>
+Future improvements include caching results at the slaves and <br>
 allowing the master itself to access the data directly.
 
 ## deployment
