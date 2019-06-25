@@ -5,6 +5,7 @@
     <artifactId>awesome-broadcaster</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>awesome-broadcaster</name>
+    <packaging>jar</packaging>
     <description>awesome-broadcaster</description>
     <properties>
         <logback_version>1.2.1</logback_version>

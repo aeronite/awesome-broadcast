@@ -15,9 +15,9 @@ class ApplicationTest {
     @Test
     fun testRoot() {
         withTestApplication({ module() }) {
-            handleRequest(HttpMethod.Get, "/").apply {
+            handleRequest(HttpMethod.Get, "/awesome/api/stuff/master/hello").apply {
                 assertEquals(HttpStatusCode.OK, response.status())
-                assertEquals("HELLO WORLD!", response.content)
+                assertEquals("Requested key not found!", response.content)
             }
         }
     }
