@@ -32,6 +32,7 @@ fun Application.module() {
                 manager.storeToMaster(call.parameters.keyForStuff(), value)
                 call.respondText("Param Added", contentType = ContentType.Text.Plain)
             }
+            //Routes used internally by all nodes to reach the master node
             route("/master"){
                 get("/{key}") {
                     val value = manager.retrieve(call.parameters.keyForStuff())

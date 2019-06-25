@@ -6,6 +6,11 @@ import io.ktor.client.request.get
 import io.ktor.client.request.post
 import io.ktor.client.request.url
 
+/**
+ * Internal logic for handling message requests.
+ * Requests from external sources will be redirected to the master node.
+ * The master node simply stores the values in a map
+ */
 class RequestManager(private val masterIp: String) {
     private val requests = mutableMapOf<String,String>()
 

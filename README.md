@@ -1,7 +1,21 @@
 # awesome-broadcast
 Shares messages with multiple service endpoints in an awesome way
 
-MASTER_IP environment variable required for running
+## implementation
+
+This service is currently a simple master slave model.<br>
+One instance is designated (via env var) as the master <br>
+All instances (including the master itself) send actually requests <br>
+to this ip.<br>
+Future improvements include cashing results at the slaves and <br>
+allowing the master itself to access the data directly.
+
+## deployment
+**MASTER_IP** environment variable is required for running
+* git clone https://github.com/aeronite/awesome-broadcast.git
+* mvn clean install
+* docker build -t awesome1 .
+* sudo docker run -d -it -e MASTER_IP='<your_server_ip>' -p 8080:8080 --rm awesome
 
 
 ### sample usage
